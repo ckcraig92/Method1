@@ -9,6 +9,10 @@ namespace Method1
 {
     internal class Program
     {
+        static void PrintText(aMessage);
+        {
+            Console.WriteLine(aMessage);
+        }
         static double HandleDoubleInput(string aMessage) //aMessage is a parameter/arguement/input of method HandleDoubleInput
         {
             double returnValue = Double.MaxValue;
@@ -27,7 +31,7 @@ namespace Method1
             } while (returnValue == Int32.MaxValue);//keep repeating when the variable still has the initiate value -until the variable does not have the initiate value
           return returnValue;
         }
-        static int HandleDoubleInput(string aMessage) //aMessage is a parameter/arguement/input of method HandleDoubleInput
+        static int HandleIntegerInput(string aMessage) //aMessage is a parameter/arguement/input of method HandleDoubleInput
         {
             double returnValue = Int32.MaxValue;
             do
@@ -45,7 +49,7 @@ namespace Method1
             } while (returnValue == Int32.MaxValue);//keep repeating when the variable still has the initiate value -until the variable does not have the initiate value
             return returnValue;
         }
-        static int HandleDoubleInput(string aMessage, string anError) //aMessage is a parameter/arguement/input of method HandleDoubleInput
+        static int HandleIntegerInput(string aMessage, string anError) //aMessage is a parameter/arguement/input of method HandleDoubleInput
         {
             double returnValue = Int32.MaxValue;
             do
@@ -91,7 +95,7 @@ namespace Method1
             //calculate total
             totalSale = price*(1-promotion)* (1+tax);
 
-            int customerBill = HandleIntegerInput("How much customer pay?" , "Bill should be a whole number");
+            int customerBill = HandleIntegerInput(aMessage:"How much customer pay?" ,anError: "Invalid Input");
             Console.WriteLine(totalSale);
 
             Console.Read();
